@@ -19,6 +19,11 @@ ADD COLUMN nueva_col_puesto VARCHAR(100);
 ALTER TABLE empleados ADD COLUMN edad INTEGER DEFAULT 30;
 
 
+-- Agregar una fila a una tabla existente --
+INSERT INTO actividad.dim_categoria_aportacion (tipo_aportacion, descripcion)
+VALUES (13, 'Policial')
+
+
 -- Generar una tabla nueva con algunas columnas nuevas --
 create table esquema.dim_tabla as 
 select distinct descripcion_cod, 3 as id_fuente,'usuario' as usuario_carga, '2024-09-18' as fecha_carga  
