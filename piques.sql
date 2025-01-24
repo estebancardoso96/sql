@@ -1,5 +1,5 @@
 
---- PIQUES Código SQL ----
+--- PIQUES Código SQL Postgre ----
 
 -- Eliminar una tabla (tener cuidado!!) --
 drop table esquema.tabla;
