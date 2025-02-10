@@ -8,9 +8,14 @@ drop table esquema.tabla;
 -- Renombrar una tabla --
 ALTER TABLE esquema.tabla_nombre_viejo RENAME TO esquema.tabla_nombre_nuevo;
 
--- Renombrar una columna de una tabla --
 
+-- Renombrar una columna de una tabla --
 ALTER TABLE nombre_tabla RENAME COLUMN nombre_viejo TO nombre_nuevo
+
+
+-- Mover de public a un esquema una tabla --
+ALTER TABLE public.mi_tabla SET SCHEMA nuevo_esquema;
+
 
 -- Crear una columna a un tabla existente --
 ALTER TABLE tabla_existente 
