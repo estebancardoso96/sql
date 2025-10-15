@@ -39,7 +39,7 @@ from poblacion.fact_vinculos fvbc
 where descripcion_cod is not null
 order by cod_causal
 
--- Editar uno o más valores (edito la edad de la persona con id_persona igual a 35) de filas de una tabla --
+-- Editar uno o más valores de filas de una tabla (edito la edad de la persona con id_persona igual a 2)--
 update esquema.tabla
 set edad = 35
 where id_persona = 2
