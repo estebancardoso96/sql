@@ -1,8 +1,17 @@
 
 --- PIQUES Código SQL Postgre ----
 
+-- cerrar todas las conexiones idle (evita cerrar las conexiones activas)
+SELECT pg_terminate_backend(pid)
+FROM pg_stat_activity
+WHERE usename = 'usr_ecardoso'
+  AND state = 'idle'
+  AND pid <> pg_backend_pid();
+
+
 -- Otorgar permisos a usuarios sobre una tabla
 GRANT TRUNCATE, UPDATE, REFERENCES, TRIGGER, INSERT, DELETE, SELECT ON TABLE foreign_db.error_vinculacion TO owner_registros_prod;
+
 
 -- Eliminar una tabla (tener cuidado!!) --
 drop table esquema.tabla;
