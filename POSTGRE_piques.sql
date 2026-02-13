@@ -1,6 +1,9 @@
 
 --- PIQUES Código SQL Postgre ----
 
+-- Otorgar permisos a usuarios sobre una tabla
+GRANT TRUNCATE, UPDATE, REFERENCES, TRIGGER, INSERT, DELETE, SELECT ON TABLE foreign_db.error_vinculacion TO owner_registros_prod;
+
 -- Eliminar una tabla (tener cuidado!!) --
 drop table esquema.tabla;
 
@@ -43,3 +46,6 @@ order by cod_causal
 update esquema.tabla
 set edad = 35
 where id_persona = 2
+
+GRANT TRUNCATE, UPDATE, REFERENCES, TRIGGER, INSERT, DELETE, SELECT ON TABLE foreign_db.error_vinculacion TO owner_registros_prod;
+
