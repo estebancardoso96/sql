@@ -1,6 +1,12 @@
 
 --- PIQUES Código SQL Postgre ----
 
+IMPORT FOREIGN SCHEMA public
+LIMIT TO (tabla)
+FROM SERVER svr_registros_staging
+INTO esquema_tabla;
+
+
 -- cerrar todas las conexiones idle (evita cerrar las conexiones activas)
 SELECT pg_terminate_backend(pid)
 FROM pg_stat_activity
